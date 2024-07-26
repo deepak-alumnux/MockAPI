@@ -2,6 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import cors from "cors";
 //Setting up express
+const PORT = 2000
 const app = express();
 app.options("*", cors());
 app.use(cors());
@@ -35,6 +36,6 @@ function getRandomStatusCode() {
   return statusCodes[randomIndex];
 }
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
